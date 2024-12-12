@@ -1,3 +1,5 @@
 Back in the day when i peed my pandas.
 adding something else to test VIM
 need to drink water today
+
+It's  a new day. trying to see how git works.
