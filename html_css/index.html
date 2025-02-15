@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <!-- To add external CSS -->
     <title>Practice</title>
+
 </head>
 
 <body>
@@ -309,8 +310,202 @@
         <div class="cat">Flex_shrink</div>
     </div>
 
+    <h2>JAVASCRIPT</h2>
+    <h3>Variables</h3>
+    <ul>
+        <li>'let'- we can re-assign</li>
+        <li>'const'- we <em>can't</em> re-assign and will throw an error if we try</li>
+    </ul>
+
+    <h3>DOM MANIPULATION</h3>
+    <div id="container"></div>
+
+    <h3>EVENT LISTENERS</h3>
+    <p>Three ways of generating an event</p>
+    <ul>
+        <li>Specify attributes directly in HTML. However, not as ideal because we are cluttering html with JS<p>
+                <button onclick="alert('Hello from the HTML')"> Click Me</button>
+            </p>
+        </li>
+        <li>In the JS script using 'onclick' <button id="follow"> Subscribe! </button></li>
+        <li> In the JS script using 'addEventListener
+            <p><button id="red">Change color</button></p>
+        </li>
+    </ul>
+
+    <h2>Creating Tables</h2>
+
+    <table>
+        <tr>
+            <th>Cell 1</th>
+            <th>Cell 2</th>
+            <th>Cell 3</th>
+        </tr>
+        <tr>
+            <td>name</td>
+            <td>age</td>
+            <td>profession</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Animals</th>
+        </tr>
+        <tr>
+            <th>Dog</th>
+        </tr>
+        <tr>
+            <th>Cat</th>
+            <td>Orange</td>
+            <td>Black</td>
+        </tr>
+        <tr>
+            <th>Fish</th>
+            <td>Gold</td>
+        </tr>
+    </table>
+
+    <h2>CSS units</h2>
+    <h3>Absolute units</h3>
+    <ul>
+        <li>px</li>
+        <li>in (inch)</li>
+        <li>cm (centimeter)</li>
+    </ul>
+    <h3>Relative units</h3>
+    <ul>
+        <li>rem = font size of the root element</li>
+    </ul>
+    <h4>Viewport units</h4>
+    <ul>
+        <li>vh = viewport height (1vh = 1% of veiwport height)</li>
+        <li> vw = viewport width (1vw = 1% of viewport width)</li>
+    </ul>
+
+    <h2>Advance selectors</h2>
+    <h3>Child and sibling combinators</h3>
+    <ul>
+
+        <li>
+            > = child combinator;
+            ex: main > div // will target all first divs under the main
+
+            ex: main > div > div // will target all second divs under the main
+
+        </li>
+
+        <li>
+            + = adjacent sibling combinator;
+        </li>
+
+        <li>
+            ~ = general sibling combinator; select all siblings following and element.
+        </li>
+    </ul>
+    <h3>Pseudo Classes</h3>
+    <ul>
+        <li>Pseudo class selectors are prefixed with a single colon and are a different way to target elements that
+            already exist in HTML.</li>
+    </ul>
+
+    <h3>Pseudo Elements</h3>
+    <ul>
+        <li>Pseudo elemts are prefixed with two colons and are used to target elements that don't normally exist in the
+            markup. </li>
+        <button class="pseudo-class">Use Pseudoclass</button>
+        <li>
+            <ul>
+                <p>Examples:</p>
+                <li>:hover</li>
+                <li>:focus</li>
+                <li>:active</li>
+                <button class="active">Active element</button>
+            </ul>
+        </li>
+
+        <p>Really good for creating functionality of buttons and stuff without the need of Javascript</p>
+    </ul>
+
+    <h3>Pseudo Elements</h3>
+    <p>notated with a double colon. these elements allpw us to affect parts of the HTML that aren't elements at all.
+    </p>
+    <ul>
+        <li>
+            ::marker = allows customization of the styling of list elements' bullets or numbers
+
+        </li>
+        <li>
+            ::first-letter and ::first-line allow you to give special styling to the first letter or line of some text
+        </li>
+
+        <li>
+            ::selection allows you to change the highlightinh when a user selects text on the page
+        </li>
+
+        <li>
+            ::before and ::after allows addition of extra elements onto the page with CSS, instead of HTML
+        </li>
+    </ul>
+
+    <h3>Attribute Selector</h3>
+    <p>selects attributes such as 'src' or 'href' or 'a' </p>
+
+    <ul>
+        <li>[attribute]- general selector will select anything where the given attribute exists. Its value doesn't
+            matter</li>
+
+        <li> selector[attribute]- combine attributes and selectors with other types of selectors of selector</li>
+
+        <li>[attribute="value"] To get really specific, we can use = to match a specific attribute with a specific value
+        </li>
+
+
+    </ul>
+    <h2>CSS Functions</h2>
+    <p>CSS function = a word followed by a pair of parentheses () containing information between them, as in
+        background-color: rgb(0,0,0)</p>
+
+
+    <ul>
+        <li>rgb()</li>
+        <li>calc():
+            <ul>
+                <p>The most powerful use cases for calc are</p>
+                <li> mixing units </li>
+                <li> The ability to nest calc( calc() - calc()) <p> An example is: main = calc(100vh -
+                        calc(var(--header)) + var(--footer)) where we can calculate the size of the view port of the
+                        main based on </p>
+                </li>
+            </ul>
+        </li>
+        <li>min()</li>
+        <li>max()</li>
+        <li>
+            <p>Complete list of CSS functions </p> <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Functions">CSS Functions</a>
+        </li>
+
+    </ul>
+    <h2>CSS Properties</h2>
+    <p> declare custom property with double hyphen '--' with a case-sensitive hyphen-separated property name i.e.
+        '--color-error-text'. Store any valid Css value in the custom property. i.e '--color-error-text: red;'</p>
+    <p>To access the custom property we use the var() function as the valuse of a CSS property and then place our custom
+        property in paranthesis i.e. color: var(--color-error-text); will produce red for the color</p>
+
+    <p>var() has two parameters the desired state and the fallback i.e. color:(--color-error-text, black);</p>
+
+    <div class="theme-toggle">This will change the theme of the whole page. Currently the theme is <span
+            class="theme-name">light</span>
+        <button class="theme">Change the Theme</button>
+    </div>
+
 
 
 </body>
+
+
+
+<script src="dom.js"></script>
 
 </html>

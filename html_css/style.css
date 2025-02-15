@@ -1,13 +1,21 @@
-* {
-    background-color: antiquewhite;
-}
-
 .title {
     margin: px
 }
 
+:root.light {
+    --color-bckgrnd: white;
+    --text-color: black;
+    --border-clr: black;
+}
+
+:root.dark {
+    --text-color: white;
+    --color-bckgrnd: black;
+}
+
 body {
-    margin: 50px;
+    background-color: var(--color-bckgrnd);
+    color: var(--text-color);
 }
 
 .container_1 {
@@ -64,5 +72,26 @@ body {
 .container_2 .cat {
     background-color: lightgreen;
     text-align: center;
+
+}
+
+.pseudo-class:hover {
+    background-color: aqua;
+    font-size: xx-large;
+
+}
+
+.active:active {
+    background-color: greenyellow;
+}
+
+li::marker {
+    color: royalblue;
+}
+
+button {
+    background-color: var(--color-bckgrnd);
+    color: var(--text-color);
+    border-color: var(--border-clr);
 
 }
